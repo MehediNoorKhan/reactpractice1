@@ -7,7 +7,12 @@ export default function BeMarchent() {
   return (
     <div
       className="p-20 mb-25 rounded-3xl bg-[#03373D]"
-      style={{ backgroundImage: `url(${beMerchantBg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      style={{ backgroundImage: `url(${beMerchantBg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}
+      data-aos="fade-up" 
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-anchor-placement="top-center"
     >
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img
