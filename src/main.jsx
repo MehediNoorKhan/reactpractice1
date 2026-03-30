@@ -11,7 +11,7 @@ AOS.init();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <div className='urbanist-regular max-w-7xl mx-auto'>
+    <div className='urbanist-regular'>
  <RouterProvider router={router} />
     </div>
   </StrictMode>,

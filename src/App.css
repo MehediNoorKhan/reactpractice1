@@ -1,0 +1,21 @@
+/* Accordion custom styles */
+.collapse:focus-within,
+.collapse:active {
+  border-color: #067A87 !important;
+  background-color: #C3DFE2 !important;
+}
+.collapse input:checked ~ .collapse-title,
+.collapse input:checked ~ .collapse-content {
+  border-color: #067A87 !important;
+  background-color: #C3DFE2 !important;
+}
+
+/* Accordion title color */
+.collapse-title {
+  color: #03373D !important;
+}
+
+/* Accordion answer/content color */
+.collapse-content {
+  color: #606060 !important;
+}
