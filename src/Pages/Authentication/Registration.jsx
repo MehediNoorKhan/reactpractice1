@@ -1,14 +1,23 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import imageUploadingIcon from "../../../assets/image-upload-icon.png"
+import useAuth from '../../hooks/useAuth';
 
 export default function Registration() {
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const { createUser } = useAuth();
 
   const onSubmit = (data) => {
-    // Handle registration logic here
-    // For file: data.avatar[0] is the uploaded file
+
     console.log('Registration data:', data);
+    createUser(data.email, data.password)
+      .then(result => {
+        const user = result.user;
+        console.log('User created:', user);
+      })
+      .catch(error => {
+        console.error('Error creating user:', error);
+      });
   };
 
   return (

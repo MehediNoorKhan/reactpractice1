@@ -25,7 +25,8 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-[80px] border-t border-b border-dashed border-gray-300 mb-[80px] " data-aos="fade-up" data-aos-offset="200"
+    <section className="py-[80px] border-t border-b border-dashed border-gray-300 mb-[80px] " 
+    data-aos="fade-up" data-aos-offset="200"
     data-aos-delay="50"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out"

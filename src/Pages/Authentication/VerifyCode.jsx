@@ -48,12 +48,12 @@ export default function VerifyCode() {
                 outline: 'none',
                 background: '#fff',
                 transition: 'border 0.2s',
-              }}
+              }}                                                                                                                                                                                                                                                                                                                                                                                                                                           
               onChange={e => handleChange(e, idx)}
               onKeyDown={e => handleKeyDown(e, idx)}
             />
           ))}
-        </div>
+        </div>                                                                                                                           
         <button
           style={{
             width: '100%',

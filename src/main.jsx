@@ -6,13 +6,16 @@ import { router } from './Route/router.jsx'
 import { RouterProvider } from 'react-router'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import AuthProviders from './context/AuthProviders.jsx'
 
 AOS.init();
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <div className='urbanist-regular'>
- <RouterProvider router={router} />
+<AuthProviders>
+  <RouterProvider router={router} />
+</AuthProviders>
     </div>
   </StrictMode>,
 )
