@@ -1,12 +1,26 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import useAuth from '../../hooks/useAuth';
+import { useNavigate } from 'react-router';
 
 export default function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
+  const {signInUser} = useAuth();
+  const navigate = useNavigate();
+
   const onSubmit = (data) => {
-    // Handle login logic here
-    console.log('Login data:', data);
+    
+    signInUser(data.email, data.password).then((userCredential) => {
+    const user = userCredential.user;
+    console.log(user);
+    navigate('/');
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    console.log(errorCode, errorMessage);
+  });
   };
 
   return (
